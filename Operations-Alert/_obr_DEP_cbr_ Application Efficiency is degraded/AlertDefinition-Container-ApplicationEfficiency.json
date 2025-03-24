@@ -1,0 +1,36 @@
+{
+  "id": "AlertDefinition-Container-ApplicationEfficiency",
+  "name": "(DEP) Application Efficiency is degraded",
+  "description": "This alert has been deprecated. The Efficiency metric will be deprecated in the future.",
+  "adapterKindKey": "Container",
+  "resourceKindKey": "BusinessService",
+  "waitCycles": 1,
+  "cancelCycles": 1,
+  "type": 15,
+  "subType": 19,
+  "states": [  {
+    "severity": "AUTO",
+    "base-symptom-set":     {
+      "type": "SYMPTOM_SET",
+      "adapterKindKey": "ALL",
+      "resourceKindKey": "All",
+      "relation": "CHILD",
+      "aggregation": "COUNT",
+      "symptomSetOperator": "OR",
+      "populationOperator": "GT",
+      "value": 0,
+      "symptomDefinitionIds":       [
+        "SymptomDefinition-vCenter Operations Adapter-EfficiencyStateYellow",
+        "SymptomDefinition-vCenter Operations Adapter-EfficiencyStateRed",
+        "SymptomDefinition-vCenter Operations Adapter-EfficiencyStateOrange"
+      ],
+      "alertConditions": []
+    },
+    "impact":     {
+      "impactType": "BADGE",
+      "detail": "efficiency"
+    },
+    "recommendationPriorityMap": {"Recommendation-df-Container-checkApplicationMemberTopAlertsEfficiency": 1}
+  }],
+  "forVCDTenants": false
+}

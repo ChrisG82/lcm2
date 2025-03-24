@@ -1,0 +1,6 @@
+{
+  "contentName": "(DEP) Application Efficiency is degraded",
+  "id": "AlertDefinition-Container-ApplicationEfficiency",
+  "contentType": "Operations-Alert",
+  "descendents": []
+}
